@@ -1,0 +1,24 @@
+@import "nullstyle";
+@import "header";
+@import "body";
+
+body{
+  font-family: 'Comfortaa', sans-serif;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.container-for-header {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+

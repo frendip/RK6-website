@@ -1,0 +1,75 @@
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu__logo {
+  display: flex;
+}
+.menu__img img {
+  width: 50px;
+  height: 25px;
+}
+.menu__department {
+  margin: -2px;
+  font-size: 29px;
+  font-weight: bold;
+  padding: 0 4px 0 0;
+}
+.menu__speciality {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  letter-spacing: -2px;
+  font-size: 7px;
+  font-weight: bold;
+  padding: 0 84px 0 0;
+}
+.menu__list {
+  display: flex;
+  margin: 0 -32px;
+}
+.menu__link {
+  font-weight: lighter;
+  color: #0b2635;
+  padding: 10px 32px 10px 32px;
+}
+.menu__link:hover {
+  background-color: rgba(227, 228, 248, 0.2);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.header {
+  padding: 20px 30px 100px 30px;
+  background: linear-gradient(to bottom right, #eeffcd, #98a9ef, #eb8fe2);
+}
+.header__menu {
+  padding: 0 0 45px 0;
+}
+.header__main {
+  display: flex;
+  margin: 0 -22px;
+  align-items: center;
+}
+.header__information {
+  padding: 0 22px;
+}
+.header__title {
+  color: #0b2635;
+  font-size: 72px;
+  padding: 0 0 20px 0;
+}
+.header__subtitle {
+  color: #0b2635;
+  font-size: 55px;
+  font-weight: lighter;
+}
+.header__cards {
+  padding: 0 22px;
+  width: 600px;
+  height: 380px;
+  background-color: rgba(227, 228, 248, 0.2);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=header.css.map */

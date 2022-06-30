@@ -1,0 +1,355 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+.header {
+  padding: 20px 30px 100px 30px;
+  background-image: linear-gradient(111deg, #eeffcd 0%, #98a9ef 52%, #eb8fe2 100%);
+}
+.header__menu {
+  padding: 0 0 45px 0;
+}
+.header__main {
+  display: flex;
+  margin: 0 -22px;
+  align-items: center;
+}
+.header__information {
+  padding: 0 22px;
+}
+.header__title {
+  color: #0b2635;
+  font-size: 72px;
+  padding: 0 0 20px 0;
+}
+.header__subtitle {
+  color: #0b2635;
+  font-size: 55px;
+  font-weight: lighter;
+}
+.header__cards {
+  padding: 0 22px;
+  width: 600px;
+  height: 380px;
+  background-color: rgba(227, 228, 248, 0.2);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu__logo {
+  display: flex;
+}
+.menu__img img {
+  width: 50px;
+  height: 25px;
+  margin: 0 0 0 -5px;
+}
+.menu__department {
+  margin: -2px;
+  font-size: 29px;
+  font-weight: bold;
+  padding: 0 4px 0 0;
+}
+.menu__speciality {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  letter-spacing: -2px;
+  font-size: 7px;
+  font-weight: bold;
+  padding: 0 84px 0 0;
+}
+.menu__list {
+  display: flex;
+  margin: 0 -32px;
+}
+.menu__link {
+  font-weight: lighter;
+  color: #0b2635;
+  transition-duration: 0.35s;
+  padding: 10px 32px 10px 32px;
+}
+.menu__link:hover {
+  background-color: rgba(227, 228, 248, 0.2);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.students-and-applicants {
+  padding: 120px 30px;
+}
+.students-and-applicants__row {
+  display: flex;
+  margin: 0 -105px;
+}
+.students-and-applicants__info-card {
+  flex: 0 0 50%;
+  padding: 0 105px;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info-card__logo {
+  padding: 0 0 16px 0;
+}
+.info-card__logo img {
+  width: 42px;
+  height: 42px;
+}
+.info-card__title {
+  text-align: center;
+  color: #0b2635;
+  font-size: 30px;
+  padding: 0 0 28px 0;
+}
+.info-card__info {
+  font-weight: lighter;
+  text-align: center;
+  color: #0b2635;
+  font-size: 14px;
+  padding: 0 0 28px 0;
+}
+.info-card__button {
+  background-image: linear-gradient(103deg, #eeffcd 0%, #98a9ef 52%, #eb8fe2);
+  border-radius: 60px;
+  width: 137px;
+  height: 31px;
+  transition-duration: 0.35s;
+}
+.info-card__button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+.info-card__button:hover {
+  border-radius: 60px 0 60px 0;
+  background-image: linear-gradient(103deg, #d7fa89 0%, #6480f5 52%, #e35cd8);
+}
+
+.about-department {
+  background-color: #e3e4f8;
+  padding: 45px 30px;
+}
+.about-department__title {
+  font-size: 30px;
+  padding: 0 0 20px 0;
+  color: #0b2635;
+}
+.about-department__row {
+  display: flex;
+  margin: 0 -20px;
+}
+.about-department__list {
+  padding: 0 20px;
+  color: #0b2635;
+  font-weight: lighter;
+  flex: 0 0 60%;
+}
+.about-department__list li {
+  padding: 0 0 25px 0;
+}
+.about-department__list li:last-child {
+  padding: 0;
+}
+.about-department__img {
+  padding: 0 20px;
+  position: relative;
+}
+.about-department__img img {
+  border-radius: 20px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.teachers {
+  padding: 130px 30px;
+}
+.teachers__title {
+  padding: 0 0 55px 0;
+}
+.teachers__row {
+  display: flex;
+  margin: 0 -20px;
+}
+.teachers__teacher-card {
+  padding: 0 20px;
+  flex: 0 0 25%;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -5px;
+}
+.title__img {
+  padding: 0 5px;
+}
+.title__img img {
+  width: 42px;
+  height: 42px;
+}
+.title__text {
+  padding: 0 5px;
+  color: #0b2635;
+  font-size: 30px;
+}
+
+.teacher-card {
+  display: flex;
+  flex-direction: column;
+}
+.teacher-card__photo {
+  position: relative;
+}
+.teacher-card__photo img {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 185px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.teacher-card__info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.teacher-card__full-name {
+  font-weight: lighter;
+  color: #fff;
+  padding: 5px;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.teacher-card__achievements {
+  font-weight: lighter;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  padding: 12px;
+}
+.teacher-card__colour-1 {
+  background-image: linear-gradient(120deg, #9153ff, rgba(145, 83, 255, 0.4) 100%);
+}
+.teacher-card__colour-2 {
+  background-image: linear-gradient(120deg, #eb8fe2, rgba(235, 143, 226, 0.4) 100%);
+}
+.teacher-card__colour-3 {
+  background-image: linear-gradient(120deg, #7e95f5, rgba(152, 169, 239, 0.4) 100%);
+}
+.teacher-card__colour-4 {
+  background-image: linear-gradient(120deg, rgba(255, 111, 83, 0.4), #eeffcd 100%);
+}
+
+body {
+  font-family: "Comfortaa", sans-serif;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-for-header {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=style.css.map */
