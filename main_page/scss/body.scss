@@ -36,6 +36,7 @@
     text-align: center;
     color: #0b2635;
     font-size: 14px;
+    line-height: 1.2;
     padding: 0 0 28px 0;
   }
   &__button {
@@ -79,6 +80,7 @@
     padding: 0 38px;
     color: #0b2635;
     flex: 0 0 60%;
+    line-height: 1.2;
     li {
       padding: 0 0 25px 0;
     }
@@ -188,7 +190,7 @@
 
 .future-professions {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), linear-gradient(106deg, #eeffcd 0%, #98a9ef 52%, #eb8fe2);
-  padding: 50px 0 0 0;
+  padding: 50px 30px 0 30px;
   &__row {
     display: flex;
   }
@@ -203,8 +205,9 @@
   }
   &__subtitle {
     font-size: 14px;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.75);
     font-weight: 300;
+    line-height: 1.2;
   }
   &__profession-card-row {
     display: flex;
@@ -242,5 +245,55 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     text-align: center;
+  }
+}
+
+.partners {
+  padding: 140px 30px;
+  &__title {
+    padding: 0 0 60px 0;
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+  }
+  &__company {
+    border-bottom: solid 2px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:first-child {
+      border-radius: 20px 20px 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 20px 20px;
+    }
+  }
+}
+
+.company {
+  background-color: #e3e4f8;
+  &__img {
+    border-right: solid 2px white;
+    padding: 25px 0;
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    img{
+      width: 80%;
+      height: 80%;
+      top: 0;
+      left: 0;
+      object-fit: contain;
+    }
+  }
+  &__text {
+    padding: 0 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: #0b2635;
+    line-height: 1.5;
   }
 }
