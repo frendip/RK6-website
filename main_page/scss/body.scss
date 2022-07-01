@@ -4,11 +4,11 @@
   padding: 120px 30px;
   &__row {
     display: flex;
-    margin: 0 -105px;
+    margin: 0 -90px;
   }
   &__info-card {
     flex: 0 0 50%;
-    padding: 0 105px;
+    padding: 0 90px;
   }
 }
 
@@ -24,13 +24,15 @@
     padding: 0 0 16px 0;
   }
   &__title {
+    flex-grow: 1;
+    font-weight: 500;
     text-align: center;
     color: #0b2635;
     font-size: 30px;
     padding: 0 0 28px 0;
   }
   &__info {
-    font-weight: lighter;
+    flex-grow: 1;
     text-align: center;
     color: #0b2635;
     font-size: 14px;
@@ -49,6 +51,7 @@
       height: 100%;
       color: #fff;
       font-family: "Montserrat", sans-serif;
+      font-weight: 300;
       font-size: 12px;
     }
     transition-duration: 0.35s;
@@ -63,18 +66,18 @@
   background-color: #e3e4f8;
   padding: 45px 30px;
   &__title {
-    font-size: 30px;
     padding: 0 0 20px 0;
+    font-size: 30px;
     color: #0b2635;
+    font-weight: 700;
   }
   &__row {
     display: flex;
-    margin: 0 -20px;
+    margin: 0 -38px;
   }
   &__list {
-    padding: 0 20px;
+    padding: 0 38px;
     color: #0b2635;
-    font-weight: lighter;
     flex: 0 0 60%;
     li {
       padding: 0 0 25px 0;
@@ -128,8 +131,9 @@
   }
   &__text {
     padding: 0 5px;
-    color: #0b2635;
     font-size: 30px;
+    color: #0b2635;
+    font-weight: 700;
   }
 }
 
@@ -153,16 +157,16 @@
     flex-direction: column;
     border-radius: 0 0 20px 20px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    font-family: 'Montserrat', sans-serif;
   }
   &__full-name {
-    font-weight: lighter;
+    font-weight: 300;
     color: #fff;
     padding: 5px;
-    height: 45px;
     background-color: rgba(0, 0, 0, 0.2);
   }
   &__achievements {
-    font-weight: lighter;
+    font-weight: 300;
     text-align: center;
     color: #fff;
     font-size: 12px;
@@ -178,7 +182,7 @@
     background-image: linear-gradient(120deg, #7e95f5, rgba(152, 169, 239, 0.4) 100%);
   }
   &__colour-4 {
-    background-image: linear-gradient(120deg, rgba(255, 111, 83, 0.4), #eeffcd 100%);
+    background-image: linear-gradient(120deg, rgba(255, 111, 83, 0.4), #d3e879 100%);
   }
 }
 
@@ -193,13 +197,14 @@
     padding: 0 30px 0 0;
   }
   &__title {
-    color: #fff;
     font-size: 44px;
+    color: #fff;
     padding: 0 0 30px 0;
   }
   &__subtitle {
     font-size: 14px;
-    color: #fff;
+    color: rgba(255,255,255,0.6);
+    font-weight: 300;
   }
   &__profession-card-row {
     display: flex;
@@ -229,8 +234,10 @@
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 0 0 20px 20px;
     padding: 5px 0;
-    color: #fff;
     font-size: 12px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
     text-align: center;
   }
 }
