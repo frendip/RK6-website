@@ -370,6 +370,10 @@ h1, h2, h3, h4, h5, h6 {
   flex: 0 0 33.3%;
 }
 
+.profession-card {
+  display: flex;
+  flex-direction: column;
+}
 .profession-card__img {
   position: relative;
 }
@@ -382,6 +386,7 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
 }
 .profession-card__profession {
+  flex-grow: 1;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 0 0 20px 20px;
   padding: 5px 0;
