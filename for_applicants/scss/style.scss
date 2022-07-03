@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&family=Montserrat:wght@300;400;500;700&display=swap');
 @import "nullstyle";
 @import "header";
+@import "body";
 
 @mixin for-desktop-up {
   @media (min-width: 1800px) { @content; }
