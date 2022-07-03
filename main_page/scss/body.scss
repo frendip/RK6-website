@@ -439,9 +439,6 @@
       }
     }
   }
-  @include for-phone-only {
-
-  }
 }
 
 .partners {
@@ -463,6 +460,13 @@
     }
     &:last-child {
       border-radius: 0 0 20px 20px;
+    }
+  }
+
+  @include for-tablet-portrait-down {
+    &__company {
+      flex-wrap: wrap;
+      padding: 0 0 20px 0;
     }
   }
 }
@@ -491,5 +495,25 @@
     font-size: 12px;
     color: #0b2635;
     line-height: 1.5;
+  }
+
+  @include for-desktop-up {
+    &__text {
+      font-size: 14px;
+    }
+  }
+  @include for-tablet-portrait-down {
+    &__img {
+      border-right: none;
+      flex: 0 0 60%;
+    }
+    &__text {
+      font-size: 14px;
+    }
+  }
+  @include for-phone-only {
+    &__img {
+      flex: 0 0 80%;
+    }
   }
 }

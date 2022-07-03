@@ -745,6 +745,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 150px;
   }
 }
+
 .partners {
   padding: 140px 30px;
 }
@@ -766,6 +767,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .partners__company:last-child {
   border-radius: 0 0 20px 20px;
+}
+@media (max-width: 900px) {
+  .partners__company {
+    flex-wrap: wrap;
+    padding: 0 0 20px 0;
+  }
 }
 
 .company {
@@ -793,6 +800,25 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
   color: #0b2635;
   line-height: 1.5;
+}
+@media (min-width: 1800px) {
+  .company__text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 900px) {
+  .company__img {
+    border-right: none;
+    flex: 0 0 60%;
+  }
+  .company__text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 599px) {
+  .company__img {
+    flex: 0 0 80%;
+  }
 }
 
 .footer {
