@@ -668,6 +668,46 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 20px 50px 20px;
   flex: 0 0 33.3%;
 }
+@media (min-width: 1800px) {
+  .future-professions__title {
+    font-size: 50px;
+    padding: 0 0 50px 0;
+  }
+  .future-professions__subtitle {
+    font-size: 16px;
+  }
+}
+@media (max-width: 900px) {
+  .future-professions__title {
+    text-align: center;
+  }
+  .future-professions__subtitle {
+    font-size: 16px;
+    padding: 0 0 30px 0;
+  }
+  .future-professions__row {
+    flex-direction: column;
+  }
+  .future-professions__profession-card-row {
+    margin: 0 -10px;
+  }
+  .future-professions__profession-card {
+    padding: 0 10px 50px 10px;
+    flex: 0 0 26%;
+  }
+}
+@media (max-width: 599px) {
+  .future-professions__title {
+    font-size: 35px;
+  }
+  .future-professions__profession-card-row {
+    margin: 0 -15px;
+  }
+  .future-professions__profession-card {
+    padding: 0 15px 50px 15px;
+    flex: 0 0 50%;
+  }
+}
 
 .profession-card {
   display: flex;
@@ -695,7 +735,16 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   text-align: center;
 }
-
+@media (min-width: 1800px) {
+  .profession-card__img img {
+    height: 160px;
+  }
+}
+@media (max-width: 900px) {
+  .profession-card__img img {
+    height: 150px;
+  }
+}
 .partners {
   padding: 140px 30px;
 }
