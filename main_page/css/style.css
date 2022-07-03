@@ -83,6 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header__main {
   display: flex;
+  justify-content: space-between;
   margin: 0 -22px;
   align-items: center;
 }
@@ -170,8 +171,6 @@ h1, h2, h3, h4, h5, h6 {
   .header__subtitle {
     font-size: 60px;
   }
-}
-@media (max-width: 900px) {
   .menu__img img {
     width: 60px;
     height: 30px;
@@ -184,6 +183,21 @@ h1, h2, h3, h4, h5, h6 {
   }
   .menu__link {
     font-size: 16.8px;
+  }
+}
+@media (max-width: 900px) {
+  .menu__img img {
+    width: 65px;
+    height: 32.5px;
+  }
+  .menu__department {
+    font-size: 37.7px;
+  }
+  .menu__speciality {
+    font-size: 9.1px;
+  }
+  .menu__link {
+    font-size: 18.2px;
   }
   .header__title {
     font-size: 75px;
@@ -335,6 +349,27 @@ h1, h2, h3, h4, h5, h6 {
   flex: 0 0 50%;
   padding: 0 90px;
 }
+@media (max-width: 900px) {
+  .students-and-applicants__row {
+    margin: 0 -40px;
+  }
+  .students-and-applicants__info-card {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 599px) {
+  .students-and-applicants__row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .students-and-applicants__info-card {
+    flex: 0 0 70%;
+    padding: 0 0 70px 0;
+  }
+  .students-and-applicants__info-card:last-child {
+    padding: 0;
+  }
+}
 
 .info-card {
   display: flex;
@@ -425,6 +460,35 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   object-fit: cover;
+}
+@media (max-width: 900px) {
+  .about-department__title {
+    text-align: center;
+  }
+  .about-department__row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .about-department__list {
+    flex: 0 0 80%;
+    padding: 0 0 50px 0;
+  }
+  .about-department__img {
+    flex: 0 0 80%;
+    height: 70%;
+  }
+  .about-department__img img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 599px) {
+  .about-department__title {
+    font-size: 33px;
+  }
+  .about-department__list {
+    font-size: 16px;
+  }
 }
 
 .teachers {
@@ -691,6 +755,15 @@ body._lock {
 .container {
   max-width: 850px;
   margin: 0 auto;
+}
+
+@media (min-width: 1800px) {
+  .container-for-header {
+    max-width: 1600px;
+  }
+  .container {
+    max-width: 1100px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

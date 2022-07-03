@@ -8,7 +8,7 @@
   @media (max-width: 1200px) { @content; }
 }
 @mixin for-desktop-up {
-  @media (min-width: 1201px) { @content; }
+  @media (min-width: 1800px) { @content; }
 }
 
 
@@ -20,6 +20,7 @@
   }
   &__main {
     display: flex;
+    justify-content: space-between;
     margin: 0 -22px;
     align-items: center;
   }
@@ -113,9 +114,6 @@
       font-size: 60px;
     }
   }
-}
-
-@include for-tablet-portrait-up {
   .menu {
     &__img {
       img {
@@ -131,6 +129,26 @@
     }
     &__link {
       font-size: 14 * 1.2px;
+    }
+  }
+}
+
+@include for-tablet-portrait-up {
+  .menu {
+    &__img {
+      img {
+        width: 50 * 1.3px;
+        height: 25 * 1.3px;
+      }
+    }
+    &__department {
+      font-size: 29 * 1.3px;
+    }
+    &__speciality {
+      font-size: 7 * 1.3px;
+    }
+    &__link {
+      font-size: 14 * 1.3px;
     }
   }
   .header {
