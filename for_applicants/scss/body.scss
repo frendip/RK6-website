@@ -68,3 +68,92 @@
     }
   }
 }
+
+.admission-rules {
+  padding: 60px 30px;
+  background: url("../img/body/admission-rules/studying-bg.jpg") center center/cover fixed no-repeat;
+  position: relative;
+  z-index: 1;
+  &__blackout {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #000000;
+    opacity: 0.50;
+  }
+  &__title {
+    text-align: center;
+    font-size: 44px;
+    color: #fff;
+    padding: 0 0 85px 0;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 -45px;
+    padding: 0 0 95px 0;
+  }
+  &__button {
+    padding: 20px 45px;
+    border-radius: 60px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      font-size: 20px;
+      &:hover {
+        color: #0b2635;
+      }
+    }
+  }
+  &__colour-1 {
+    background-image: linear-gradient(103deg, #7e95f5 27%, rgba(152, 169, 239, 0.6) 100%);
+  }
+  &__colour-2 {
+    background-image: linear-gradient(103deg, #9153ff 27%, rgba(145, 83, 255, 0.6) 100%);
+  }
+  &__colour-3 {
+    background-image: linear-gradient(103deg, #eb8fe2 21%, rgba(235, 143, 226, 0.6) 100%);
+  }
+  &__text {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;;
+    line-height: 1.5;
+    padding: 0 0 10px 0;
+    border-bottom: white 2px solid;
+    margin: 0 200px;
+  }
+
+  @include for-tablet-portrait-down {
+    &__row {
+      flex-wrap: wrap;
+    }
+    &__button {
+      flex: 0 0 55%;
+      margin: 15px 0;
+
+    }
+    &__text {
+      margin: 0 100px;
+    }
+  }
+  @include for-phone-only {
+    &__button {
+      a {
+        font-size: 18px;
+      }
+    }
+    &__text {
+      margin: 0 15px;
+    }
+  }
+}

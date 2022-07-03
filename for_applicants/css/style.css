@@ -102,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 .information__text-text {
-  padding: 0 10px;
+  padding: 0 20px;
   flex: 0 0 60%;
   order: 2;
   font-size: 18px;
@@ -440,6 +440,91 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 599px) {
   .training-profile__title {
     align-items: start;
+  }
+}
+
+.admission-rules {
+  padding: 60px 30px;
+  background: url("../img/body/admission-rules/studying-bg.jpg") center center/cover fixed no-repeat;
+  position: relative;
+  z-index: 1;
+}
+.admission-rules__blackout {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #000000;
+  opacity: 0.5;
+}
+.admission-rules__title {
+  text-align: center;
+  font-size: 44px;
+  color: #fff;
+  padding: 0 0 85px 0;
+}
+.admission-rules__row {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 -45px;
+  padding: 0 0 95px 0;
+}
+.admission-rules__button {
+  padding: 20px 45px;
+  border-radius: 60px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.admission-rules__button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 20px;
+}
+.admission-rules__button a:hover {
+  color: #0b2635;
+}
+.admission-rules__colour-1 {
+  background-image: linear-gradient(103deg, #7e95f5 27%, rgba(152, 169, 239, 0.6) 100%);
+}
+.admission-rules__colour-2 {
+  background-image: linear-gradient(103deg, #9153ff 27%, rgba(145, 83, 255, 0.6) 100%);
+}
+.admission-rules__colour-3 {
+  background-image: linear-gradient(103deg, #eb8fe2 21%, rgba(235, 143, 226, 0.6) 100%);
+}
+.admission-rules__text {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+  padding: 0 0 10px 0;
+  border-bottom: white 2px solid;
+  margin: 0 200px;
+}
+@media (max-width: 900px) {
+  .admission-rules__row {
+    flex-wrap: wrap;
+  }
+  .admission-rules__button {
+    flex: 0 0 55%;
+    margin: 15px 0;
+  }
+  .admission-rules__text {
+    margin: 0 100px;
+  }
+}
+@media (max-width: 599px) {
+  .admission-rules__button a {
+    font-size: 18px;
+  }
+  .admission-rules__text {
+    margin: 0 15px;
   }
 }
 
