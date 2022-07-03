@@ -528,6 +528,52 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.passing-scores {
+  padding: 120px 30px;
+}
+.passing-scores__title {
+  display: flex;
+  justify-content: center;
+  margin: 0 -10px;
+  padding: 0 0 10px 0;
+}
+.passing-scores__img {
+  padding: 0 10px;
+}
+.passing-scores__img img {
+  height: 30px;
+  width: 30px;
+}
+.passing-scores__text {
+  padding: 0 10px;
+  font-size: 30px;
+  color: #1d1d1d;
+  font-weight: 600;
+}
+.passing-scores__years {
+  font-size: 22px;
+  color: #afafaf;
+  font-weight: 600;
+  text-align: center;
+}
+@media (min-width: 1800px) {
+  .passing-scores__text {
+    font-size: 35px;
+  }
+  .passing-scores__years {
+    font-size: 26px;
+  }
+}
+@media (max-width: 599px) {
+  .passing-scores__title {
+    align-items: start;
+    padding: 0 0 20px 0;
+  }
+  .passing-scores__years {
+    font-size: 20px;
+  }
+}
+
 body {
   font-family: "Comfortaa", sans-serif;
 }

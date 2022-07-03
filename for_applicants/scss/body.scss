@@ -157,3 +157,51 @@
     }
   }
 }
+
+.passing-scores {
+  padding: 120px 30px;
+  &__title {
+    display: flex;
+    justify-content: center;
+    margin: 0 -10px;
+    padding: 0 0 10px 0;
+  }
+  &__img {
+    padding: 0 10px;
+    img {
+      height: 30px;
+      width: 30px;
+    }
+  }
+  &__text {
+    padding: 0 10px;
+    font-size: 30px;
+    color: #1d1d1d;
+    font-weight: 600;
+  }
+  &__years {
+    font-size: 22px;
+    color: #afafaf;
+    font-weight: 600;
+    text-align: center;
+  }
+  &__schedule { }
+
+  @include for-desktop-up {
+    &__text {
+      font-size: 35px;
+    }
+    &__years {
+      font-size: 26px;
+    }
+  }
+  @include for-phone-only {
+    &__title {
+      align-items: start;
+      padding: 0 0 20px 0;
+    }
+    &__years {
+      font-size: 20px;
+    }
+  }
+}
