@@ -1,14 +1,14 @@
 @mixin for-phone-only {
   @media (max-width: 599px) { @content; }
 }
-@mixin for-tablet-portrait-up {
+@mixin for-tablet-portrait-down {
   @media (max-width: 900px) { @content; }
 }
-@mixin for-tablet-landscape-up {
+@mixin for-tablet-landscape-down {
   @media (max-width: 1200px) { @content; }
 }
 @mixin for-desktop-up {
-  @media (min-width: 1201px) { @content; }
+  @media (min-width: 1800px) { @content; }
 }
 
 .body {
@@ -26,8 +26,8 @@
     padding: 0 90px;
   }
 
-  @include for-tablet-landscape-up {}
-  @include for-tablet-portrait-up {
+  @include for-tablet-landscape-down {}
+  @include for-tablet-portrait-down {
     &__row {
       margin: 0 -40px;
     }
@@ -99,6 +99,15 @@
       background-image: linear-gradient(103deg, #d7fa89 0%, #6480f5 52%, #e35cd8);
     }
   }
+
+  @include for-desktop-up {
+    &__title {
+      font-size: 32px;
+    }
+    &__info {
+      font-size: 18px;
+    }
+  }
 }
 
 .about-department {
@@ -140,8 +149,16 @@
     }
   }
 
-  @include for-tablet-landscape-up {}
-  @include for-tablet-portrait-up {
+  @include for-desktop-up {
+    &__title {
+      font-size: 35px;
+    }
+    &__list {
+      font-size: 18px;
+    }
+  }
+  @include for-tablet-landscape-down {}
+  @include for-tablet-portrait-down {
     &__title {
       text-align: center;
     }
@@ -185,7 +202,31 @@
     padding: 0 20px;
     flex: 0 0 25%;
   }
-
+  @include for-tablet-portrait-down {
+    &__row {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    &__teacher-card {
+      flex: 0 0 35%;
+      margin: 0 0 40px 0;
+      &:nth-child(3) {
+        margin: 0;
+      }
+      &:nth-child(4) {
+        margin: 0;
+      }
+    }
+  }
+  @include for-phone-only {
+    &__teacher-card {
+      flex: 0 0 60%;
+      margin: 0 0 30px 0;
+      &:nth-child(3) {
+        margin: 0 0 30px 0;
+      }
+    }
+  }
 }
 
 .title {
@@ -205,6 +246,17 @@
     font-size: 30px;
     color: #0b2635;
     font-weight: 700;
+  }
+
+  @include for-desktop-up {
+    &__text {
+      font-size: 37px;
+    }
+  }
+  @include for-phone-only {
+    &__text {
+      font-size: 25px;
+    }
   }
 }
 
@@ -255,6 +307,22 @@
   &__colour-4 {
     background-image: linear-gradient(120deg, rgba(255, 111, 83, 0.4), #d3e879 100%);
   }
+
+  @include for-desktop-up {
+    &__photo {
+      img {
+        height: 260px;
+      }
+    }
+  }
+  @include for-tablet-portrait-down {
+    &__photo {
+      img {
+        height: 210px;
+      }
+    }
+  }
+
 }
 
 .future-professions {

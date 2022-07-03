@@ -1,10 +1,10 @@
 @mixin for-phone-only {
   @media (max-width: 599px) { @content; }
 }
-@mixin for-tablet-portrait-up {
+@mixin for-tablet-portrait-down {
   @media (max-width: 900px) { @content; }
 }
-@mixin for-tablet-landscape-up {
+@mixin for-tablet-landscape-down {
   @media (max-width: 1200px) { @content; }
 }
 @mixin for-desktop-up {
@@ -98,7 +98,7 @@
   }
 }
 
-@include for-tablet-landscape-up {
+@include for-tablet-landscape-down {
   .header {
     &__main {
       padding: 50px 0 0 0;
@@ -133,7 +133,7 @@
   }
 }
 
-@include for-tablet-portrait-up {
+@include for-tablet-portrait-down {
   .menu {
     &__img {
       img {

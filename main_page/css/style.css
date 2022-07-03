@@ -421,6 +421,14 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 60px 0 60px 0;
   background-image: linear-gradient(103deg, #d7fa89 0%, #6480f5 52%, #e35cd8);
 }
+@media (min-width: 1800px) {
+  .info-card__title {
+    font-size: 32px;
+  }
+  .info-card__info {
+    font-size: 18px;
+  }
+}
 
 .about-department {
   background-color: #e3e4f8;
@@ -460,6 +468,14 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   object-fit: cover;
+}
+@media (min-width: 1800px) {
+  .about-department__title {
+    font-size: 35px;
+  }
+  .about-department__list {
+    font-size: 18px;
+  }
 }
 @media (max-width: 900px) {
   .about-department__title {
@@ -505,6 +521,31 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 20px;
   flex: 0 0 25%;
 }
+@media (max-width: 900px) {
+  .teachers__row {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .teachers__teacher-card {
+    flex: 0 0 35%;
+    margin: 0 0 40px 0;
+  }
+  .teachers__teacher-card:nth-child(3) {
+    margin: 0;
+  }
+  .teachers__teacher-card:nth-child(4) {
+    margin: 0;
+  }
+}
+@media (max-width: 599px) {
+  .teachers__teacher-card {
+    flex: 0 0 60%;
+    margin: 0 0 30px 0;
+  }
+  .teachers__teacher-card:nth-child(3) {
+    margin: 0 0 30px 0;
+  }
+}
 
 .title {
   display: flex;
@@ -524,6 +565,16 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 30px;
   color: #0b2635;
   font-weight: 700;
+}
+@media (min-width: 1800px) {
+  .title__text {
+    font-size: 37px;
+  }
+}
+@media (max-width: 599px) {
+  .title__text {
+    font-size: 25px;
+  }
 }
 
 .teacher-card {
@@ -573,6 +624,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 .teacher-card__colour-4 {
   background-image: linear-gradient(120deg, rgba(255, 111, 83, 0.4), #d3e879 100%);
+}
+@media (min-width: 1800px) {
+  .teacher-card__photo img {
+    height: 260px;
+  }
+}
+@media (max-width: 900px) {
+  .teacher-card__photo img {
+    height: 210px;
+  }
 }
 
 .future-professions {

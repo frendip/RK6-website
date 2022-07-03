@@ -4,6 +4,10 @@
 @import "body";
 @import "footer";
 
+@mixin for-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
 body{
   font-family: 'Comfortaa', sans-serif;
   &._lock {
@@ -26,7 +30,7 @@ body{
   margin: 0 auto;
 }
 
-@media (min-width: 1800px) {
+@include for-desktop-up {
   .container-for-header {
     max-width: 1600px;
   }
