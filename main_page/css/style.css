@@ -157,6 +157,27 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 20px;
 }
 
+@media (min-width: 1800px) {
+  .header__title {
+    font-size: 100px;
+  }
+  .header__subtitle {
+    font-size: 60px;
+  }
+  .menu__img img {
+    width: 60px;
+    height: 30px;
+  }
+  .menu__department {
+    font-size: 34.8px;
+  }
+  .menu__speciality {
+    font-size: 8.4px;
+  }
+  .menu__link {
+    font-size: 16.8px;
+  }
+}
 @media (max-width: 1200px) {
   .header__main {
     padding: 50px 0 0 0;

@@ -115,6 +115,38 @@
   }
 }
 
+@include for-desktop-up {
+  .menu {
+    &__img {
+      img {
+        width: 50 * 1.2px;
+        height: 25 * 1.2px;
+      }
+    }
+    &__department {
+      font-size: 29 * 1.2px;
+    }
+    &__speciality {
+      font-size: 7 * 1.2px;
+    }
+    &__link {
+      font-size: 14 * 1.2px;
+    }
+  }
+  .information {
+    &__text-title {
+      font-size: 75px;
+    }
+    &__text-text {
+      font-size: 24px;
+    }
+    &__img {
+      img {
+        height: 190px;
+      }
+    }
+  }
+}
 @include for-tablet-landscape-down {
   .menu {
     &__img {
@@ -131,6 +163,19 @@
     }
     &__link {
       font-size: 14 * 1.2px;
+    }
+  }
+  .information {
+    &__text-title {
+      font-size: 60px;
+    }
+    &__text-text {
+      font-size: 16px;
+    }
+    &__img {
+      img {
+        height: 150px;
+      }
     }
   }
 }
@@ -151,6 +196,28 @@
     }
     &__link {
       font-size: 14 * 1.3px;
+    }
+  }
+  .information {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    &__text-title {
+      text-align: center;
+      padding: 0 0 30px 0;
+    }
+    &__text-text {
+      order: 0;
+      padding: 0 0 30px 0;
+    }
+    &__img-row {
+      flex: 0 0 80%
+    }
+    &__img {
+      flex: 0 0 50%;
+      img {
+        height: 170px;
+      }
     }
   }
 }
@@ -261,6 +328,25 @@
           bottom: 50%;
           transform: rotate(45deg) translate(0, 50%);
         }
+      }
+    }
+  }
+  .information {
+    padding: 100px 0 0 0;
+    &__text-text {
+      font-size: 18px;
+    }
+    &__img-row {
+      flex-wrap: wrap;
+    }
+    &__img {
+      &:last-child {
+        padding: 0;
+      }
+      flex: 0 0 100%;
+      padding: 0 0 20px 0;
+      img {
+        height: 220px;
       }
     }
   }

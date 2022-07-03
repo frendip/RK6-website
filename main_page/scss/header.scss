@@ -98,6 +98,33 @@
   }
 }
 
+@include for-desktop-up {
+  .header {
+    &__title {
+      font-size: 100px;
+    }
+    &__subtitle {
+      font-size: 60px;
+    }
+  }
+  .menu {
+    &__img {
+      img {
+        width: 50 * 1.2px;
+        height: 25 * 1.2px;
+      }
+    }
+    &__department {
+      font-size: 29 * 1.2px;
+    }
+    &__speciality {
+      font-size: 7 * 1.2px;
+    }
+    &__link {
+      font-size: 14 * 1.2px;
+    }
+  }
+}
 @include for-tablet-landscape-down {
   .header {
     &__main {
