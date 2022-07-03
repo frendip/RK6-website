@@ -11,41 +11,58 @@
   @media (min-width: 1800px) { @content; }
 }
 
-
 .header {
   padding: 20px 30px 100px 30px;
   background-image: linear-gradient(111deg, #eeffcd 0%, #98a9ef 52%, #eb8fe2 100%);
   &__menu {
     padding: 0 0 45px 0
   }
-  &__main {
+  &__col {
     display: flex;
-    justify-content: space-between;
-    margin: 0 -22px;
-    align-items: center;
+    flex-direction: column;
   }
   &__information {
-    padding: 0 22px;
+    display: flex;
+    padding: 0 0 50px 0;
   }
-  &__title {
+}
+
+.information {
+  margin: 0 -10px;
+  &__text-title {
+    padding: 0 10px;
+    flex: 0 0 60%;
     font-family: 'Montserrat', sans-serif;
+    font-size: 70px;
     color: #0b2635;
-    font-size: 75px;
-    font-weight: 500;
-    padding: 0 0 20px 0;
-  }
-  &__subtitle {
-    color: #0b2635;
-    font-size: 44px;
     font-weight: 500;
   }
-  &__cards {
-    padding: 0 22px;
-    width: 600px;
-    height: 380px;
-    background-color: rgba(227, 228, 248, 0.2);
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+  &__text-text {
+    padding: 0 10px;
+    flex: 0 0 60%;
+    order: 2;
+    font-size: 18px;
+    color: #0b2635;
+    font-weight: 500;
+  }
+  &__img-row {
+    padding: 0 10px;
+    display: flex;
+    margin: 0 -25px;
+  }
+  &__img {
+    padding: 0 25px;
+    position: relative;
+    img {
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      width: 100%;
+      height: 160px;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+
   }
 }
 
@@ -99,21 +116,6 @@
 }
 
 @include for-tablet-landscape-down {
-  .header {
-    &__main {
-      padding: 50px 0 0 0;
-      flex-direction: column;
-    }
-    &__information {
-      margin: 0 0 50px 0;
-    }
-    &__title {
-        font-size: 100px;
-    }
-    &__subtitle {
-      font-size: 60px;
-    }
-  }
   .menu {
     &__img {
       img {
@@ -149,14 +151,6 @@
     }
     &__link {
       font-size: 14 * 1.3px;
-    }
-  }
-  .header {
-    &__title {
-      font-size: 75px;
-    }
-    &__subtitle {
-      font-size: 44px;
     }
   }
 }
@@ -268,28 +262,6 @@
           transform: rotate(45deg) translate(0, 50%);
         }
       }
-    }
-  }
-  .header {
-    &__main {
-      padding: 50px 0 0 0;
-    }
-    &__information {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex-grow: 1;
-      padding: 50px 0 0 0;
-    }
-    &__title {
-      font-size: 45px;
-      margin: 0 0 0 -15px;
-    }
-    &__subtitle {
-      font-size: 25px;
-    }
-    &__cards {
-      width: 80%;
     }
   }
 }
