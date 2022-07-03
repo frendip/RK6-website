@@ -83,6 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header__main {
   display: flex;
+  justify-content: space-between;
   margin: 0 -22px;
   align-items: center;
 }
@@ -155,6 +156,56 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   border-radius: 20px;
 }
+
+@media (max-width: 1200px) {
+  .header__main {
+    padding: 50px 0 0 0;
+    flex-direction: column;
+  }
+  .header__information {
+    margin: 0 0 50px 0;
+  }
+  .header__title {
+    font-size: 100px;
+  }
+  .header__subtitle {
+    font-size: 60px;
+  }
+  .menu__img img {
+    width: 60px;
+    height: 30px;
+  }
+  .menu__department {
+    font-size: 34.8px;
+  }
+  .menu__speciality {
+    font-size: 8.4px;
+  }
+  .menu__link {
+    font-size: 16.8px;
+  }
+}
+@media (max-width: 900px) {
+  .menu__img img {
+    width: 65px;
+    height: 32.5px;
+  }
+  .menu__department {
+    font-size: 37.7px;
+  }
+  .menu__speciality {
+    font-size: 9.1px;
+  }
+  .menu__link {
+    font-size: 18.2px;
+  }
+  .header__title {
+    font-size: 75px;
+  }
+  .header__subtitle {
+    font-size: 44px;
+  }
+}
 @media (max-width: 599px) {
   .menu {
     position: fixed;
@@ -170,18 +221,18 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 5;
   }
   .menu__img img {
-    width: 77px;
-    height: 37px;
+    width: 61px;
+    height: 29px;
     margin: 0 0 0 -5px;
   }
   .menu__department {
     position: relative;
-    font-size: 45px;
+    font-size: 36px;
     z-index: 5;
   }
   .menu__speciality {
     position: relative;
-    font-size: 10px;
+    font-size: 8px;
     z-index: 5;
   }
   .menu__link {
@@ -262,8 +313,27 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 50%;
     transform: rotate(45deg) translate(0, 50%);
   }
+  .header__main {
+    padding: 50px 0 0 0;
+  }
+  .header__information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    padding: 50px 0 0 0;
+  }
+  .header__title {
+    font-size: 45px;
+    margin: 0 0 0 -15px;
+  }
+  .header__subtitle {
+    font-size: 25px;
+  }
+  .header__cards {
+    width: 80%;
+  }
 }
-
 .body {
   flex-grow: 1;
 }
@@ -278,6 +348,27 @@ h1, h2, h3, h4, h5, h6 {
 .students-and-applicants__info-card {
   flex: 0 0 50%;
   padding: 0 90px;
+}
+@media (max-width: 900px) {
+  .students-and-applicants__row {
+    margin: 0 -40px;
+  }
+  .students-and-applicants__info-card {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 599px) {
+  .students-and-applicants__row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .students-and-applicants__info-card {
+    flex: 0 0 70%;
+    padding: 0 0 70px 0;
+  }
+  .students-and-applicants__info-card:last-child {
+    padding: 0;
+  }
 }
 
 .info-card {
@@ -330,6 +421,14 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 60px 0 60px 0;
   background-image: linear-gradient(103deg, #d7fa89 0%, #6480f5 52%, #e35cd8);
 }
+@media (min-width: 1800px) {
+  .info-card__title {
+    font-size: 32px;
+  }
+  .info-card__info {
+    font-size: 18px;
+  }
+}
 
 .about-department {
   background-color: #e3e4f8;
@@ -370,6 +469,43 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   object-fit: cover;
 }
+@media (min-width: 1800px) {
+  .about-department__title {
+    font-size: 35px;
+  }
+  .about-department__list {
+    font-size: 18px;
+  }
+}
+@media (max-width: 900px) {
+  .about-department__title {
+    text-align: center;
+  }
+  .about-department__row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .about-department__list {
+    flex: 0 0 80%;
+    padding: 0 0 50px 0;
+  }
+  .about-department__img {
+    flex: 0 0 80%;
+    height: 70%;
+  }
+  .about-department__img img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 599px) {
+  .about-department__title {
+    font-size: 33px;
+  }
+  .about-department__list {
+    font-size: 16px;
+  }
+}
 
 .teachers {
   padding: 130px 30px;
@@ -384,6 +520,31 @@ h1, h2, h3, h4, h5, h6 {
 .teachers__teacher-card {
   padding: 0 20px;
   flex: 0 0 25%;
+}
+@media (max-width: 900px) {
+  .teachers__row {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .teachers__teacher-card {
+    flex: 0 0 35%;
+    margin: 0 0 40px 0;
+  }
+  .teachers__teacher-card:nth-child(3) {
+    margin: 0;
+  }
+  .teachers__teacher-card:nth-child(4) {
+    margin: 0;
+  }
+}
+@media (max-width: 599px) {
+  .teachers__teacher-card {
+    flex: 0 0 60%;
+    margin: 0 0 30px 0;
+  }
+  .teachers__teacher-card:nth-child(3) {
+    margin: 0 0 30px 0;
+  }
 }
 
 .title {
@@ -404,6 +565,16 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 30px;
   color: #0b2635;
   font-weight: 700;
+}
+@media (min-width: 1800px) {
+  .title__text {
+    font-size: 37px;
+  }
+}
+@media (max-width: 599px) {
+  .title__text {
+    font-size: 25px;
+  }
 }
 
 .teacher-card {
@@ -454,6 +625,16 @@ h1, h2, h3, h4, h5, h6 {
 .teacher-card__colour-4 {
   background-image: linear-gradient(120deg, rgba(255, 111, 83, 0.4), #d3e879 100%);
 }
+@media (min-width: 1800px) {
+  .teacher-card__photo img {
+    height: 260px;
+  }
+}
+@media (max-width: 900px) {
+  .teacher-card__photo img {
+    height: 210px;
+  }
+}
 
 .future-professions {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), linear-gradient(106deg, #eeffcd 0%, #98a9ef 52%, #eb8fe2);
@@ -487,6 +668,46 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 20px 50px 20px;
   flex: 0 0 33.3%;
 }
+@media (min-width: 1800px) {
+  .future-professions__title {
+    font-size: 50px;
+    padding: 0 0 50px 0;
+  }
+  .future-professions__subtitle {
+    font-size: 16px;
+  }
+}
+@media (max-width: 900px) {
+  .future-professions__title {
+    text-align: center;
+  }
+  .future-professions__subtitle {
+    font-size: 16px;
+    padding: 0 0 30px 0;
+  }
+  .future-professions__row {
+    flex-direction: column;
+  }
+  .future-professions__profession-card-row {
+    margin: 0 -10px;
+  }
+  .future-professions__profession-card {
+    padding: 0 10px 50px 10px;
+    flex: 0 0 26%;
+  }
+}
+@media (max-width: 599px) {
+  .future-professions__title {
+    font-size: 35px;
+  }
+  .future-professions__profession-card-row {
+    margin: 0 -15px;
+  }
+  .future-professions__profession-card {
+    padding: 0 15px 50px 15px;
+    flex: 0 0 50%;
+  }
+}
 
 .profession-card {
   display: flex;
@@ -514,6 +735,16 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   text-align: center;
 }
+@media (min-width: 1800px) {
+  .profession-card__img img {
+    height: 160px;
+  }
+}
+@media (max-width: 900px) {
+  .profession-card__img img {
+    height: 150px;
+  }
+}
 
 .partners {
   padding: 140px 30px;
@@ -536,6 +767,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .partners__company:last-child {
   border-radius: 0 0 20px 20px;
+}
+@media (max-width: 900px) {
+  .partners__company {
+    flex-wrap: wrap;
+    padding: 0 0 20px 0;
+  }
 }
 
 .company {
@@ -563,6 +800,25 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
   color: #0b2635;
   line-height: 1.5;
+}
+@media (min-width: 1800px) {
+  .company__text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 900px) {
+  .company__img {
+    border-right: none;
+    flex: 0 0 60%;
+  }
+  .company__text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 599px) {
+  .company__img {
+    flex: 0 0 80%;
+  }
 }
 
 .footer {
@@ -594,6 +850,32 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   padding: 20px 0 20px 40px;
 }
+@media (min-width: 1800px) {
+  .footer__title {
+    font-size: 20px;
+  }
+  .footer__copyright {
+    font-size: 14px;
+    padding: 20px 0 20px 75px;
+  }
+}
+@media (max-width: 900px) {
+  .footer__title {
+    padding: 30px 0 15px 0;
+  }
+  .footer__img-and-text:last-child {
+    padding: 0 0 20px 0;
+  }
+  .footer__row {
+    flex-wrap: wrap;
+    justify-content: left;
+    padding: 0 40px;
+  }
+  .footer__map {
+    flex: 0 0 100%;
+    padding: 0 0 30px 0;
+  }
+}
 
 .img-and-text {
   display: flex;
@@ -611,6 +893,18 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 0 10px 0;
   color: #fff;
   font-weight: 300;
+}
+@media (min-width: 1800px) {
+  .img-and-text {
+    padding: 2px 0;
+  }
+  .img-and-text__img img {
+    height: 17px;
+    width: 17px;
+  }
+  .img-and-text__text {
+    font-size: 14px;
+  }
 }
 
 body {
@@ -635,6 +929,15 @@ body._lock {
 .container {
   max-width: 850px;
   margin: 0 auto;
+}
+
+@media (min-width: 1800px) {
+  .container-for-header {
+    max-width: 1600px;
+  }
+  .container {
+    max-width: 1100px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

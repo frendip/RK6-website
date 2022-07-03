@@ -1,18 +1,16 @@
 @mixin for-phone-only {
   @media (max-width: 599px) { @content; }
 }
-@mixin for-tablet-portrait-up {
-  @media (min-width: 600px) { @content; }
+@mixin for-tablet-portrait-down {
+  @media (max-width: 900px) { @content; }
 }
-@mixin for-tablet-landscape-up {
-  @media (min-width: 900px) { @content; }
+@mixin for-tablet-landscape-down {
+  @media (max-width: 1200px) { @content; }
 }
 @mixin for-desktop-up {
-  @media (min-width: 1200px) { @content; }
-}
-@mixin for-big-desktop-up {
   @media (min-width: 1800px) { @content; }
 }
+
 
 .header {
   padding: 20px 30px 100px 30px;
@@ -22,6 +20,7 @@
   }
   &__main {
     display: flex;
+    justify-content: space-between;
     margin: 0 -22px;
     align-items: center;
   }
@@ -97,7 +96,73 @@
       border-radius: 20px;
     }
   }
-  @include for-phone-only {
+}
+
+@include for-tablet-landscape-down {
+  .header {
+    &__main {
+      padding: 50px 0 0 0;
+      flex-direction: column;
+    }
+    &__information {
+      margin: 0 0 50px 0;
+    }
+    &__title {
+        font-size: 100px;
+    }
+    &__subtitle {
+      font-size: 60px;
+    }
+  }
+  .menu {
+    &__img {
+      img {
+        width: 50 * 1.2px;
+        height: 25 * 1.2px;
+      }
+    }
+    &__department {
+      font-size: 29 * 1.2px;
+    }
+    &__speciality {
+      font-size: 7 * 1.2px;
+    }
+    &__link {
+      font-size: 14 * 1.2px;
+    }
+  }
+}
+
+@include for-tablet-portrait-down {
+  .menu {
+    &__img {
+      img {
+        width: 50 * 1.3px;
+        height: 25 * 1.3px;
+      }
+    }
+    &__department {
+      font-size: 29 * 1.3px;
+    }
+    &__speciality {
+      font-size: 7 * 1.3px;
+    }
+    &__link {
+      font-size: 14 * 1.3px;
+    }
+  }
+  .header {
+    &__title {
+      font-size: 75px;
+    }
+    &__subtitle {
+      font-size: 44px;
+    }
+  }
+}
+
+@include for-phone-only {
+  .menu {
     position: fixed;
     top: 0;
     left: 0;
@@ -109,19 +174,19 @@
       position: relative;
       z-index: 5;
       img {
-        width: 77px;
-        height: 37px;
+        width: 61px;
+        height: 29px;
         margin: 0 0 0 -5px;
       }
     }
     &__department {
       position: relative;
-      font-size: 45px;
+      font-size: 36px;
       z-index: 5;
     }
     &__speciality {
       position: relative;
-      font-size: 10px;
+      font-size: 8px;
       z-index: 5;
     }
     &__link {
@@ -203,6 +268,28 @@
           transform: rotate(45deg) translate(0, 50%);
         }
       }
+    }
+  }
+  .header {
+    &__main {
+      padding: 50px 0 0 0;
+    }
+    &__information {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-grow: 1;
+      padding: 50px 0 0 0;
+    }
+    &__title {
+      font-size: 45px;
+      margin: 0 0 0 -15px;
+    }
+    &__subtitle {
+      font-size: 25px;
+    }
+    &__cards {
+      width: 80%;
     }
   }
 }

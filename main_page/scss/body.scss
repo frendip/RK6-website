@@ -1,3 +1,16 @@
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-down {
+  @media (max-width: 900px) { @content; }
+}
+@mixin for-tablet-landscape-down {
+  @media (max-width: 1200px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
 .body {
   flex-grow: 1;
 }
@@ -11,6 +24,29 @@
   &__info-card {
     flex: 0 0 50%;
     padding: 0 90px;
+  }
+
+  @include for-tablet-landscape-down {}
+  @include for-tablet-portrait-down {
+    &__row {
+      margin: 0 -40px;
+    }
+    &__info-card {
+      padding: 0 40px;
+    }
+  }
+  @include for-phone-only {
+    &__row {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__info-card {
+      flex: 0 0 70%;
+      padding: 0 0 70px 0;
+      &:last-child {
+        padding: 0;
+      }
+    }
   }
 }
 
@@ -63,6 +99,15 @@
       background-image: linear-gradient(103deg, #d7fa89 0%, #6480f5 52%, #e35cd8);
     }
   }
+
+  @include for-desktop-up {
+    &__title {
+      font-size: 32px;
+    }
+    &__info {
+      font-size: 18px;
+    }
+  }
 }
 
 .about-department {
@@ -103,6 +148,45 @@
       object-fit: cover;
     }
   }
+
+  @include for-desktop-up {
+    &__title {
+      font-size: 35px;
+    }
+    &__list {
+      font-size: 18px;
+    }
+  }
+  @include for-tablet-landscape-down {}
+  @include for-tablet-portrait-down {
+    &__title {
+      text-align: center;
+    }
+    &__row {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__list {
+      flex: 0 0 80%;
+      padding: 0 0 50px 0;
+    }
+    &__img {
+      flex: 0 0 80%;
+      height: 70%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  @include  for-phone-only {
+    &__title {
+      font-size: 33px;
+    }
+    &__list {
+      font-size: 16px;
+    }
+  }
 }
 
 .teachers {
@@ -118,7 +202,31 @@
     padding: 0 20px;
     flex: 0 0 25%;
   }
-
+  @include for-tablet-portrait-down {
+    &__row {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    &__teacher-card {
+      flex: 0 0 35%;
+      margin: 0 0 40px 0;
+      &:nth-child(3) {
+        margin: 0;
+      }
+      &:nth-child(4) {
+        margin: 0;
+      }
+    }
+  }
+  @include for-phone-only {
+    &__teacher-card {
+      flex: 0 0 60%;
+      margin: 0 0 30px 0;
+      &:nth-child(3) {
+        margin: 0 0 30px 0;
+      }
+    }
+  }
 }
 
 .title {
@@ -138,6 +246,17 @@
     font-size: 30px;
     color: #0b2635;
     font-weight: 700;
+  }
+
+  @include for-desktop-up {
+    &__text {
+      font-size: 37px;
+    }
+  }
+  @include for-phone-only {
+    &__text {
+      font-size: 25px;
+    }
   }
 }
 
@@ -188,6 +307,22 @@
   &__colour-4 {
     background-image: linear-gradient(120deg, rgba(255, 111, 83, 0.4), #d3e879 100%);
   }
+
+  @include for-desktop-up {
+    &__photo {
+      img {
+        height: 260px;
+      }
+    }
+  }
+  @include for-tablet-portrait-down {
+    &__photo {
+      img {
+        height: 210px;
+      }
+    }
+  }
+
 }
 
 .future-professions {
@@ -221,6 +356,47 @@
     padding: 0 20px 50px 20px;
     flex: 0 0 33.3%
   }
+
+  @include for-desktop-up {
+    &__title {
+      font-size: 50px;
+      padding: 0 0 50px 0;
+    }
+    &__subtitle {
+      font-size: 16px;
+    }
+  }
+  @include for-tablet-portrait-down {
+    &__title {
+      text-align: center;
+    }
+    &__subtitle {
+      font-size: 16px;
+      padding: 0 0 30px 0;
+    }
+    &__row {
+      flex-direction: column;
+    }
+    &__profession-card-row {
+      margin: 0 -10px;
+    }
+    &__profession-card {
+      padding: 0 10px 50px 10px;
+      flex: 0 0 26%
+    }
+  }
+  @include for-phone-only {
+    &__title {
+      font-size: 35px;
+    }
+    &__profession-card-row {
+      margin: 0 -15px;
+    }
+    &__profession-card {
+      padding: 0 15px 50px 15px;
+      flex: 0 0 50%;
+    }
+  }
 }
 
 .profession-card {
@@ -248,6 +424,21 @@
     font-weight: 300;
     text-align: center;
   }
+
+  @include for-desktop-up {
+    &__img {
+      img {
+        height: 160px;
+      }
+    }
+  }
+  @include for-tablet-portrait-down {
+    &__img {
+      img {
+        height: 150px;
+      }
+    }
+  }
 }
 
 .partners {
@@ -269,6 +460,13 @@
     }
     &:last-child {
       border-radius: 0 0 20px 20px;
+    }
+  }
+
+  @include for-tablet-portrait-down {
+    &__company {
+      flex-wrap: wrap;
+      padding: 0 0 20px 0;
     }
   }
 }
@@ -297,5 +495,25 @@
     font-size: 12px;
     color: #0b2635;
     line-height: 1.5;
+  }
+
+  @include for-desktop-up {
+    &__text {
+      font-size: 14px;
+    }
+  }
+  @include for-tablet-portrait-down {
+    &__img {
+      border-right: none;
+      flex: 0 0 60%;
+    }
+    &__text {
+      font-size: 14px;
+    }
+  }
+  @include for-phone-only {
+    &__img {
+      flex: 0 0 80%;
+    }
   }
 }
