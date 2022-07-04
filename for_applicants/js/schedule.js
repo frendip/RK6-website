@@ -7,7 +7,7 @@ let chart = new Chart(ctx, {
           label: "Баллы",
           backgroundColor: '#7e95f5',
           borderColor: 'rgb(255, 255, 255)',
-          data: [190, 220, 210, 240, 255, 260, 252, 270, 255, 265]
+          data: [192, 223, 218, 240, 259, 266, 255, 276, 261, 279]
         }]
     },
     options: {},
