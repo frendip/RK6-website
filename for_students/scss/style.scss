@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&family=Montserrat:wght@300;400;500;700&display=swap');
+@import "nullstyle";
+@import "header";
+
+@mixin for-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+body{
+  font-family: 'Comfortaa', sans-serif;
+  &._lock {
+    overflow: hidden;
+  }
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.container-for-header {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+@include for-desktop-up {
+  .container-for-header {
+    max-width: 1600px;
+  }
+  .container {
+    max-width: 1100px;
+  }
+}
