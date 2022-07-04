@@ -205,3 +205,101 @@
     }
   }
 }
+
+.graduates {
+  padding: 50px 30px 95px 30px;
+  background-color: #e3e4f8;
+  &__title {
+    text-align: center;
+    font-size: 30px;
+    color: #1d1d1d;
+    font-weight: 600;
+    padding: 0 0 25px 0;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__graduate-card {
+    flex: 0 0 25.0%;
+  }
+
+  @include for-tablet-portrait-down {
+    &__graduate-card {
+      flex: 0 0 30%;
+    }
+  }
+  @include for-phone-only {
+    &__row {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__graduate-card {
+      flex: 0 0 70%;
+      margin: 0 0 30px 0;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.graduate-card {
+  border-radius: 20px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  &__photo {
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    img {
+      border-radius: 20px;
+      width: 80%;
+      height: 200px;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+
+  }
+  &__full-name {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 0 25px 0;
+
+  }
+  &__progress {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #000;
+    font-size: 12px;
+    padding: 0 10px 25px 10px;
+  }
+  @include for-desktop-up {
+    &__full-name {
+      font-size: 20px;
+    }
+    &__progress {
+      font-size: 14px;
+    }
+  }
+  @include for-tablet-portrait-down {
+    &__progress {
+      padding: 0 5px 25px 5px;
+    }
+  }
+  @include for-phone-only {
+    &__full-name {
+      font-size: 19px;
+    }
+    &__progress {
+      font-size: 13px;
+    }
+  }
+}

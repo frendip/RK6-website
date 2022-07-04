@@ -574,6 +574,187 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.graduates {
+  padding: 50px 30px 95px 30px;
+  background-color: #e3e4f8;
+}
+.graduates__title {
+  text-align: center;
+  font-size: 30px;
+  color: #1d1d1d;
+  font-weight: 600;
+  padding: 0 0 25px 0;
+}
+.graduates__row {
+  display: flex;
+  justify-content: space-between;
+}
+.graduates__graduate-card {
+  flex: 0 0 25%;
+}
+@media (max-width: 900px) {
+  .graduates__graduate-card {
+    flex: 0 0 30%;
+  }
+}
+@media (max-width: 599px) {
+  .graduates__row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .graduates__graduate-card {
+    flex: 0 0 70%;
+    margin: 0 0 30px 0;
+  }
+  .graduates__graduate-card:last-child {
+    margin: 0;
+  }
+}
+
+.graduate-card {
+  border-radius: 20px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+.graduate-card__photo {
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.graduate-card__photo img {
+  border-radius: 20px;
+  width: 80%;
+  height: 200px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.graduate-card__full-name {
+  text-align: center;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 0 25px 0;
+}
+.graduate-card__progress {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #000;
+  font-size: 12px;
+  padding: 0 10px 25px 10px;
+}
+@media (min-width: 1800px) {
+  .graduate-card__full-name {
+    font-size: 20px;
+  }
+  .graduate-card__progress {
+    font-size: 14px;
+  }
+}
+@media (max-width: 900px) {
+  .graduate-card__progress {
+    padding: 0 5px 25px 5px;
+  }
+}
+@media (max-width: 599px) {
+  .graduate-card__full-name {
+    font-size: 19px;
+  }
+  .graduate-card__progress {
+    font-size: 13px;
+  }
+}
+
+.footer {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(103deg, #eeffcd 0%, #98a9ef 52%, #eb8fe2);
+  padding: 45px 30px 0 30px;
+}
+.footer__row {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0;
+  border-bottom: solid 1px #aeaeae;
+  border-top: solid 1px #aeaeae;
+}
+.footer__title {
+  font-size: 18px;
+  color: #fff;
+  padding: 15px 0 15px 0;
+}
+.footer__map {
+  flex: 0 0 50%;
+}
+.footer__map iframe {
+  width: 100%;
+  height: 200px;
+}
+.footer__copyright {
+  font-size: 12px;
+  color: #aeaeae;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px 0 20px 40px;
+}
+@media (min-width: 1800px) {
+  .footer__title {
+    font-size: 20px;
+  }
+  .footer__copyright {
+    font-size: 14px;
+    padding: 20px 0 20px 75px;
+  }
+}
+@media (max-width: 900px) {
+  .footer__title {
+    padding: 30px 0 15px 0;
+  }
+  .footer__img-and-text:last-child {
+    padding: 0 0 20px 0;
+  }
+  .footer__row {
+    flex-wrap: wrap;
+    justify-content: left;
+    padding: 0 40px;
+  }
+  .footer__map {
+    flex: 0 0 100%;
+    padding: 0 0 30px 0;
+  }
+}
+
+.img-and-text {
+  display: flex;
+  margin: 0 -5px;
+}
+.img-and-text__img {
+  padding: 0 5px;
+}
+.img-and-text__img img {
+  height: 15px;
+  width: 15px;
+}
+.img-and-text__text {
+  font-size: 12px;
+  padding: 0 0 10px 0;
+  color: #fff;
+  font-weight: 300;
+}
+@media (min-width: 1800px) {
+  .img-and-text {
+    padding: 2px 0;
+  }
+  .img-and-text__img img {
+    height: 17px;
+    width: 17px;
+  }
+  .img-and-text__text {
+    font-size: 14px;
+  }
+}
+
 body {
   font-family: "Comfortaa", sans-serif;
 }
