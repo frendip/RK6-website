@@ -1,0 +1,305 @@
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-down {
+  @media (max-width: 900px) { @content; }
+}
+@mixin for-tablet-landscape-down {
+  @media (max-width: 1200px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+.body {
+  flex-grow: 1;
+}
+
+.training-profile {
+  padding: 120px 30px;
+  &__title {
+    display: flex;
+    align-items: end;
+    padding: 0 0 30px 0;
+    margin: 0 -6px;
+  }
+  &__img {
+    padding: 0 6px;
+    img {
+      width: 42px;
+      height: 42px;
+    }
+  }
+  &__text {
+    padding: 0 6px;
+    font-size: 30px;
+    color: #1d1d1d;
+    font-weight: 600;
+  }
+  &__profile {
+    font-size: 18px;
+    color: #0b2635;
+    font-weight: 500;
+    padding: 0 0 35px 0;
+  }
+  &__description {
+    padding: 16px 0;
+    border-top: solid 1px #0b2635;
+    border-bottom: solid 1px #0b2635;
+    line-height: 1.2;
+    font-family: 'Montserrat', sans-serif;
+    color: #0b2635;
+  }
+
+  @include for-desktop-up {
+    &__text {
+      font-size: 35px;
+    }
+    &__profile {
+      font-size: 20px;
+    }
+    &__description {
+      font-size: 16px;
+    }
+  }
+  @include for-phone-only {
+    &__title {
+      align-items: start;
+    }
+  }
+}
+
+.admission-rules {
+  padding: 60px 30px;
+  background: url("../img/body/admission-rules/studying-bg.jpg") center center/cover fixed no-repeat;
+  position: relative;
+  z-index: 1;
+  &__blackout {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #000000;
+    opacity: 0.50;
+  }
+  &__title {
+    text-align: center;
+    font-size: 44px;
+    color: #fff;
+    padding: 0 0 85px 0;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 -45px;
+    padding: 0 0 95px 0;
+  }
+  &__button {
+    padding: 20px 45px;
+    border-radius: 60px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      font-size: 20px;
+      &:hover {
+        color: #0b2635;
+      }
+    }
+  }
+  &__colour-1 {
+    background-image: linear-gradient(103deg, #7e95f5 27%, rgba(152, 169, 239, 0.6) 100%);
+  }
+  &__colour-2 {
+    background-image: linear-gradient(103deg, #9153ff 27%, rgba(145, 83, 255, 0.6) 100%);
+  }
+  &__colour-3 {
+    background-image: linear-gradient(103deg, #eb8fe2 21%, rgba(235, 143, 226, 0.6) 100%);
+  }
+  &__text {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;;
+    line-height: 1.5;
+    padding: 0 0 10px 0;
+    border-bottom: white 2px solid;
+    margin: 0 200px;
+  }
+
+  @include for-tablet-portrait-down {
+    &__row {
+      flex-wrap: wrap;
+    }
+    &__button {
+      flex: 0 0 55%;
+      margin: 15px 0;
+
+    }
+    &__text {
+      margin: 0 100px;
+    }
+  }
+  @include for-phone-only {
+    &__button {
+      a {
+        font-size: 18px;
+      }
+    }
+    &__text {
+      margin: 0 15px;
+    }
+  }
+}
+
+.passing-scores {
+  padding: 120px 30px;
+  &__title {
+    display: flex;
+    justify-content: center;
+    margin: 0 -10px;
+    padding: 0 0 10px 0;
+  }
+  &__img {
+    padding: 0 10px;
+    img {
+      height: 30px;
+      width: 30px;
+    }
+  }
+  &__text {
+    padding: 0 10px;
+    font-size: 30px;
+    color: #1d1d1d;
+    font-weight: 600;
+  }
+  &__years {
+    font-size: 22px;
+    color: #afafaf;
+    font-weight: 600;
+    text-align: center;
+  }
+  &__schedule { }
+
+  @include for-desktop-up {
+    &__text {
+      font-size: 35px;
+    }
+    &__years {
+      font-size: 26px;
+    }
+  }
+  @include for-phone-only {
+    &__title {
+      align-items: start;
+      padding: 0 0 20px 0;
+    }
+    &__years {
+      font-size: 20px;
+    }
+  }
+}
+
+.graduates {
+  padding: 50px 30px 95px 30px;
+  background-color: #e3e4f8;
+  &__title {
+    text-align: center;
+    font-size: 30px;
+    color: #1d1d1d;
+    font-weight: 600;
+    padding: 0 0 25px 0;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__graduate-card {
+    flex: 0 0 25.0%;
+  }
+
+  @include for-tablet-portrait-down {
+    &__graduate-card {
+      flex: 0 0 30%;
+    }
+  }
+  @include for-phone-only {
+    &__row {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__graduate-card {
+      flex: 0 0 70%;
+      margin: 0 0 30px 0;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.graduate-card {
+  border-radius: 20px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  &__photo {
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    img {
+      border-radius: 20px;
+      width: 80%;
+      height: 200px;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+
+  }
+  &__full-name {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 0 25px 0;
+
+  }
+  &__progress {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #000;
+    font-size: 12px;
+    padding: 0 10px 25px 10px;
+  }
+  @include for-desktop-up {
+    &__full-name {
+      font-size: 20px;
+    }
+    &__progress {
+      font-size: 14px;
+    }
+  }
+  @include for-tablet-portrait-down {
+    &__progress {
+      padding: 0 5px 25px 5px;
+    }
+  }
+  @include for-phone-only {
+    &__full-name {
+      font-size: 19px;
+    }
+    &__progress {
+      font-size: 13px;
+    }
+  }
+}
