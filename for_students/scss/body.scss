@@ -1,0 +1,122 @@
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-down {
+  @media (max-width: 900px) { @content; }
+}
+@mixin for-tablet-landscape-down {
+  @media (max-width: 1200px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+.body {
+  flex-grow: 1;
+}
+
+.information {
+  padding: 50px 30px 150px 30px;
+  &__title {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 70px 0;
+    border-top: solid #0b2635 1px;
+    margin: 0 -6px;
+  }
+  &__img {
+    padding: 0 6px;
+    img {
+      height: 65px;
+      width: 65px;
+    }
+  }
+  &__text {
+    padding: 0 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 72px;
+    color: #0b2635;
+    font-weight: 500;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+    justify-content: center;
+  }
+  &__info-card {
+    margin: 0 0 30px 0;
+    padding: 0 20px;
+    flex: 0 0 33.3%;
+  }
+
+  @include for-tablet-portrait-down {
+    &__info-card {
+      flex: 0 0 40%;
+    }
+  }
+  @include for-phone-only {
+    &__img {
+      img {
+        height: 45px;
+        width: 45px;
+      }
+    }
+    &__text {
+      font-size: 45px;
+    }
+    &__info-card {
+      flex: 0 0 70%;
+    }
+  }
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  &__img {
+    position: relative;
+    img{
+      border-radius: 30px 30px 0 0;
+      width: 100%;
+      height: 185px;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+  &__text {
+    transition-duration: 0.1s;
+    border-radius: 0 0 30px 30px;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 22px;
+    padding: 15px 5px;
+    a {
+      color: #fff;
+    }
+    &:hover {
+      box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
+      a{
+        color: black;
+      }
+    }
+  }
+  &__colour1 {
+    background-image: linear-gradient(105deg, #9153ff, rgba(145, 83, 255, 0.4) 100%);
+  }
+  &__colour2 {
+    background-image: linear-gradient(105deg, #eb8fe2, rgba(235, 143, 226, 0.4) 100%);
+  }
+  &__colour3 {
+    background-image: linear-gradient(105deg, #7e95f5, rgba(152, 169, 239, 0.4) 100%);
+  }
+
+  @include for-desktop-up {
+    &__img {
+      img {
+        height: 220px;
+      }
+    }
+  }
+}
