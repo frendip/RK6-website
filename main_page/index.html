@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css" />
     <title>Main Page</title>
 </head>
@@ -37,7 +38,50 @@
                             автоматизированного <br>
                             проектирования</h2>
                     </div>
-                    <div class="header__cards"></div>
+                    <div class="header__cards">
+                        <div class="header__in swiper">
+                            <div class="header__card-wrapper swiper-wrapper">
+                                <div class="header__slider-card slider-card slider-card__colour1 swiper-slide">
+                                    <div class="slider-card__story-row">
+                                        <div class="slider-card__story"></div>
+                                        <div class="slider-card__story"></div>
+                                        <div class="slider-card__active-story"></div>
+                                    </div>
+                                    <div class="slider-card__text">Студентам</div>
+                                    <h3 class="slider-card__title">Расписание занятий</h3>
+                                    <div class="slider-card__button">
+                                        <a href=""><span>Подробнее</span></a>
+                                    </div>
+                                </div>
+                                <div class="header__slider-card slider-card slider-card__colour2 swiper-slide">
+                                    <div class="slider-card__story-row">
+                                        <div class="slider-card__active-story"></div>
+                                        <div class="slider-card__story"></div>
+                                        <div class="slider-card__story"></div>
+                                    </div>
+                                    <div class="slider-card__text">Абитуриентам</div>
+                                    <h3 class="slider-card__title">Проходные баллы прошлых лет <br> <span>2012-2022</span></h3>
+                                    <div class="slider-card__button">
+                                        <a href=""><span>Подробнее</span></a>
+                                    </div>
+                                </div>
+                                <div class="header__slider-card slider-card slider-card__colour3 swiper-slide">
+                                    <div class="slider-card__story-row">
+                                        <div class="slider-card__story"></div>
+                                        <div class="slider-card__active-story"></div>
+                                        <div class="slider-card__story"></div>
+                                    </div>
+                                    <div class="slider-card__text">Абитуриентам</div>
+                                    <h3 class="slider-card__title">Направления подготовки</h3>
+                                    <div class="slider-card__button">
+                                        <a href=""><span>Подробнее</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -280,6 +324,8 @@
             </div>
         </section>
     </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/burger-menu.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 </html>
