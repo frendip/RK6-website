@@ -219,14 +219,16 @@
   &__row {
     display: flex;
     justify-content: space-between;
+    margin: 0 -20px;
   }
   &__graduate-card {
-    flex: 0 0 25.0%;
+    padding: 0 20px;
+    flex: 0 0 30.0%;
   }
 
   @include for-tablet-portrait-down {
     &__graduate-card {
-      flex: 0 0 30%;
+      flex: 0 0 32%;
     }
   }
   @include for-phone-only {
@@ -282,6 +284,11 @@
     padding: 0 10px 25px 10px;
   }
   @include for-desktop-up {
+    &__photo {
+      img {
+        height: 250px;
+      }
+    }
     &__full-name {
       font-size: 20px;
     }
